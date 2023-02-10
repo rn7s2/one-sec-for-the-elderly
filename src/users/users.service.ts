@@ -7,13 +7,10 @@ export class UsersService {
   private readonly users = [
     {
       id: 1,
-      username: 'john',
-      password: 'changeme',
-    } as User,
-    {
-      id: 2,
-      username: 'maria',
-      password: 'guess',
+      phone: '10010',
+      password: 'unicom',
+      name: 'China Unicom',
+      age: 15
     } as User,
   ]
 
@@ -21,7 +18,7 @@ export class UsersService {
     return 'This action adds a new user'
   }
 
-  async findOne(username: string): Promise<User | null> {
-    return this.users.find((user) => user.username === username)
+  async findOne(phone: string): Promise<User | null> {
+    return this.users.find((user) => user.phone === phone)
   }
 }

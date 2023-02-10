@@ -9,9 +9,17 @@ export class User {
 
   @Column()
   @ApiProperty()
-  username: string
+  phone: string
 
   @Column()
   @ApiProperty()
   password: string
+
+  @Column()
+  @ApiProperty()
+  name: string
+
+  @Column()
+  @ApiProperty()
+  age: number
 }
