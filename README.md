@@ -4,6 +4,14 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Configuration
+
+You can create a `.env.local` file and specify database details.
+
+See `.env` file for more details.
+
+***WARNING***, table schemas might be modified when `DB_SYNC` is set to be `true`. You might lose data. So it should be set to `false` when used in production.
+
 ## Installation
 
 ```bash
