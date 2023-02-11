@@ -35,7 +35,7 @@ $ yarn start:prod
 
 ## Test API
 
-After the server is launched, you can access Swagger at [http://localhost:3000/api/swagger] to play with APIs yourself.
+After the server is launched, you can access Swagger at [http://localhost:3000/api/swagger](http://localhost:3000/api/swagger) to play with APIs yourself.
 
 ## Support
 
