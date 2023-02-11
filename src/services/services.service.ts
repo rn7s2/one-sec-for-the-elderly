@@ -1,18 +1,16 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'
 
 @Injectable()
 export class ServicesService {
-
   findAll() {
-    return `This action returns all services`;
+    return `This action returns all services`
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} service`;
+    return `This action returns a #${id} service`
   }
 
-
   remove(id: number) {
-    return `This action removes a #${id} service`;
+    return `This action removes a #${id} service`
   }
 }

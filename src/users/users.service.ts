@@ -10,7 +10,7 @@ export class UsersService {
       phone: '10010',
       password: 'unicom',
       name: 'China Unicom',
-      age: 15
+      age: 15,
     } as User,
   ]
 

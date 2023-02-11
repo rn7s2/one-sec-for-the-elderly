@@ -2,7 +2,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Using [Nest](https://github.com/nestjs/nest) framework.
 
 ## Configuration
 
@@ -10,7 +10,9 @@ You can create a `.env.local` file and specify database details.
 
 See `.env` file for more details.
 
-***WARNING***, table schemas might be modified when `DB_SYNC` is set to be `true`. You might lose data. So it should be set to `false` when used in production.
+**_WARNING:_** table schemas might be modified when `DB_SYNC` is set to be `true`. You might lose data. So it should be set to `false` when used in production.
+
+**_HINT:_** you can create the database yourself, set up proper priveleges and keep `DB_SYNC` to be true. Then start the server in `dev` mode, the ORM will create necessary tables for you. **_DO NOT FORGET_** to set `DB_SYNC` back to `false` after the tables are created.
 
 ## Installation
 
@@ -31,18 +33,9 @@ $ yarn start:dev
 $ yarn start:prod
 ```
 
-## Test
+## Test API
 
-```bash
-# unit tests
-$ yarn test
-
-# e2e tests
-$ yarn test:e2e
-
-# test coverage
-$ yarn test:cov
-```
+After the server is launched, you can access Swagger at [http://localhost:3000/api/swagger] to play with APIs yourself.
 
 ## Support
 

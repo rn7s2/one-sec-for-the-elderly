@@ -19,7 +19,7 @@ export class UsersController {
   constructor(
     private readonly usersService: UsersService,
     private authService: AuthService,
-  ) { }
+  ) {}
 
   @ApiOperation({ summary: '注册用户' })
   @Post('register')
@@ -37,9 +37,10 @@ export class UsersController {
       properties: {
         access_token: {
           type: 'string',
-          default: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmlhIiwic3ViIjoyLCJpYXQiOjE2NzYwNDgzMjUsImV4cCI6MTY3NjY1MzEyNX0.baNx_fP5BNIJPLnAE7qP2wXQC5axtJZUABXz3e3tdxc'
-        }
-      }
+          default:
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmlhIiwic3ViIjoyLCJpYXQiOjE2NzYwNDgzMjUsImV4cCI6MTY3NjY1MzEyNX0.baNx_fP5BNIJPLnAE7qP2wXQC5axtJZUABXz3e3tdxc',
+        },
+      },
     },
   })
   async login(@Body() _: CreateUserDto, @Request() req) {
