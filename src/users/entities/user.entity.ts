@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger'
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
+import { SubscribedService } from 'src/services/entities/subscribed-service.entity'
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm'
 
 @Entity()
 export class User {
@@ -22,4 +23,7 @@ export class User {
   @Column()
   @ApiProperty()
   age: number
+
+  @OneToMany((type) => SubscribedService, (service) => service.phone)
+  subscribedServices: SubscribedService[]
 }

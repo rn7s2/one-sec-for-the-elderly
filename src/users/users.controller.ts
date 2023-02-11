@@ -12,6 +12,7 @@ import { CreateUserDto } from './dto/create-user.dto'
 import { LocalAuthGuard } from 'src/auth/local-auth.guard'
 import { AuthService } from 'src/auth/auth.service'
 import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger'
+import { LoginUserDto } from './dto/login-user.dto'
 
 @ApiTags('users')
 @Controller('users')
@@ -24,7 +25,7 @@ export class UsersController {
   @ApiOperation({ summary: '注册用户' })
   @Post('register')
   async create(@Body() createUserDto: CreateUserDto) {
-    return this.usersService.create(createUserDto)
+    this.usersService.create(createUserDto)
   }
 
   @ApiOperation({ summary: '用户登录' })
@@ -43,7 +44,7 @@ export class UsersController {
       },
     },
   })
-  async login(@Body() _: CreateUserDto, @Request() req) {
-    return this.authService.login(req.user)
+  async login(@Body() _: LoginUserDto, @Request() req) {
+    return await this.authService.login(req.user)
   }
 }
